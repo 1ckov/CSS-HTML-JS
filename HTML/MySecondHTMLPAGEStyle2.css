@@ -1,0 +1,19 @@
+<style>
+
+	padding: 5px 10px 15px 25px;
+	/* entspricht */
+	/*
+		padding-top: 5px; 
+		padding-right: 10px;
+		padding-bottom: 15px;
+		padding-left: 25px;
+	*/
+	/* Gruppenselektor: */
+	/* Alle Überschriften und wichtigen Elemente in olive */
+		h1, h2, .wichtig { color: olive; }
+	/* Nachfahren-Selektoren: */
+	/* Zitate in Absätzen grau */
+		p q { color: grey; }/* 
+		em in Zitaten in Abs. unterstreichen 
+	*/p q em { text-decoration: underline; } 
+</style>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container"> 
+      <header> 
+            <!-- svg - scalable vector graphics -->
+            <img src="images/logo.svg" alt="23andfour logo said the youtube guy">
+            
+            <!-- Semantic Element nav, used to contain an unorderd list, but also to tell us its a menu tab -->
+            <nav>
+                <!-- The a Element is used to represent the dropdown menu shown in mobile devices,
+                we put it first because the example uses mobile first css -->
+                <a href="#" class="hide-desktop">
+                    <img src="images/ham.svg" alt="toggle menu" class="menu" id="menu">
+                </a>
+                <!-- alt+shift+down = replicate lines of code-->
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <li id="exit" class="exit-btn hide-desktop"><img src="iamges/exit.svg" alt="a simple x, for exiting menu" ></li>
+                    <li><a href="#"> home </a></li>
+                    <li><a href="#"> services </a></li>
+                    <li><a href="#"> about </a></li>
+                    <li><a href="#"> contact </a></li>
+                </ul>
+            </nav>
+        </header> 
+        <!--A hero section-->
+        <section>
+        
+            <img src="images/server.svg" alt="server graphic" class="server">
+            
+            <h1>Servers are the past</h1>
+            
+            <p class="subhead"> throw away your dusty server and come join us you sheep</p>
+
+            <img src="images/scroll.svg" alt="scroll down" class="scroll hide-mobile show-desktop">
+
+        </section>
+    </div>
+
+    <div class="blue-container" >
+        <div class="container">
+            <ul>
+                <li>
+                    <img src="images/icon-1.svg" alt="calender icon">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </li>
+                
+                <li>
+                    <img src="images/icon-2.svg" alt="calender icon">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </li>
+                <li>
+                    <img src="images/icon-3.svg" alt="calender icon">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="gray-container" >
+        <div class="container">
+            <ul>
+                <li>
+                    <!-- figure is a special semantic Element having captions for instance-->
+                    <figure>
+                        <img src="images/user1.png" alt="Jane Doe">
+                        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</blockquote>
+                        <figcaption>- Jane Doe</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/user2.png" alt="John Doe">
+                        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</blockquote>
+                        <figcaption>- John Doe</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Start your free trial now</h2>
+        <a href="#" class="cta">Get Started</a>
+    </div>
+    <!-- Semantic Element designating the Footer(end content) of the Document-->
+    <footer>
+        <div class="footer-container"> 
+            <a href="#">
+                <img src="images/logo-white.svg" class="logo" alt="logo">
+            </a>
+                    <p class="adress">Melrose Place, 90201<br>U S A, U S A, U S A</p>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+            
+        </div>
+    </footer>
+
+
+    
+</body>
+</html>

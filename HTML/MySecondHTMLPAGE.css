@@ -1,0 +1,19 @@
+<style>
+	/* Universalselektor: Alle Elemente in mittelgrau darstellen */
+		* { 
+		color: #7f7f7f; 
+		font-size: 130%;
+		}
+	/* Typselektor: Überschriften einfärben */
+		h1 { color: olive; }
+		h2 { color: blue; }
+		p {color: #4d3; }
+	/* ID-Selektor: Element mit ID "info" mit Rahmen versehen */
+		#info { border-style: solid; border-width: 3px; }
+	/* Klassenselektor: Alle Elemente der Klasse "wichtig" einfärben. */
+		.wichtig { color: red; font-weight: bold; }
+	/* kontextabhängiger Klassenselektor: Nur "wichtig" bei em einfärben. */
+		em .wichtig { color: red; font-weight: bold; }
+		
+		
+</style>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Comments-->
+<!-- Add line Comment - [ctrl+k] + [ctrl+c]-->
+<!--  -->
+<!-- Classes in Document: 
+    [container] [blue-container] [grey-container] 
+    [hide-desktop] [show-desktop] [hide-mobile] 
+    [menu] [exit-btn] [scroll] [cta] [logo] [adress] [server]
+    [subhead] [footer-links] 
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--with link you specify an external Resource-->
+    <!--Here we link the css file-->
+    <!-- <link rel=[type of Element] href=[location of the resource]> -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Semantic Element Header, is used to describe Information usually displayed at the top of a webpage -->
+        <header>
+
+            <!--Here we use a, to make the image Clickable-->
+            <!--<img src=[location] alt=[Text to be displayed if resource missing] class=[class name for css selection]>-->
+            <a href="index.html"><img src="images/logo.svg" alt="23andfour logo" class="logo"></a>
+
+            <!--Semantic Element Navigation, describing a navigation Bar-->
+            <nav>
+
+                <a href="#" class="hide-desktop">
+                    <img src="images/ham.svg" alt="toggle menu" class="menu" id="menu">
+                </a>
+
+                <!-- UnorderedList-->
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <!-- Copy current Line up/down - [ctrl]+[alt]+[shift]+[up/down arrow] -->
+                    <li id="exit" class="exit-btn hide-desktop"><img src="images/exit.svg" alt="exit menu"></li>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <!-- Semantic Element Section used to define a primary section of the Element  -->
+        <section>
+
+            <!-- A so called Hero Section -->
+            <img src="images/server.svg" alt="server graphic" class="server">
+
+            <h1> Web Hosting for the Modern Era</h1>
+            <p class="subhead"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <img src="images/scroll.svg" alt="scroll down" class="scroll hide-mobile show-desktop">
+
+        </section>
+
+    </div>
+
+    <!-- We use blue-container to separate the part of the webpage which is gonna have a diffrent bg color -->
+    <div class="blue-container">
+
+        <!-- We still use the container class because so our content keeps the same flow as the rest of the webpage -->
+        <div class="container">
+
+            <ul>
+
+                <li><img src="images/icon-1.svg" alt="Calendar icon">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </li>
+
+                <li><img src="images/icon-2.svg" alt="Wallet icon">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </li>
+
+                <li><img src="images/icon-3.svg" alt="Phone icon">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+
+
+    <!-- Same as with blue container -->
+    <div class="grey-container">
+        <div class="container">
+            <!-- Semantic Element Figure, usually used to represent text which is self-contained
+            and has a caption or a citation  -->
+            <figure>
+                <ul>
+
+                    <li>
+                        <img src="images/user1.png" alt="User Picture">
+                        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam varius
+                            felis.</blockquote>
+                        <figcaption> Jane Doe</figcaption>
+                    </li>
+
+                    <li>
+                        <img src="images/user2.png" alt="User Picture">
+                        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam varius
+                            felis.</blockquote>
+                        <figcaption> John Doe</figcaption>
+                    </li>
+
+                </ul>
+            </figure>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Start your Free Trial now!</h2>
+        <a href="#" class="cta">Get Started</a>
+    </div>
+
+    <!-- Semantic Element Footer, used to mark the end section of a webpage,
+    containing information about the company/organization, contact information,
+    terms of service and privacy polacy-->
+    <footer>
+
+        <div class="footer-container">
+            <div class="container">
+                <a href="#">
+                    <img src="images/logo-white.svg" alt="logo" class="logo">
+                </a>
+                <p class="adress"> TEXAS , 99999 <br> USA </p>
+                <ul class="footer-links">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
