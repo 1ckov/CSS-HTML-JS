@@ -1,0 +1,259 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Vorlage für Ihre Lösungen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,a4paper,DIV=12]{scrartcl}
+
+% Pakete einbinden, die benötigt werden
+\usepackage{scrlayer-scrpage}
+\usepackage[utf8]{inputenc}       % Dateien in UTF-8 benutzen
+\usepackage[T1]{fontenc}          % Zeichenkodierung
+\usepackage{graphicx}             % Bilder einbinden
+\usepackage[main=ngerman, english]{babel}  % Deutsche Sprachunterstützung
+\usepackage[autostyle=true,german=quotes]{csquotes} % Deutsche Anführungszeichen
+\usepackage[pagebackref=false,german]{hyperref} % Hyperlinks
+\usepackage{xcolor}               % Unterstützung für Farben
+\usepackage{amsmath}              % Mathematische Formeln
+\usepackage{amsfonts}             % Mathematische Zeichensätze
+\usepackage{amssymb}              % Mathematische Symbole
+\usepackage{float}                % Fließende Objekte (Tabellen, Grafiken etc.)
+\usepackage{booktabs}             % Korrekter Tabellensatz
+\usepackage{listings}             % Quelltexte
+\usepackage{listingsutf8}         % Quelltexte in UTF8
+\usepackage[hang,font={sf,footnotesize},labelfont={footnotesize,bf}]{caption} % Beschriftungen
+\usepackage[scaled]{helvet}       % Schrift Helvetia laden
+\usepackage[bottom=25mm,left=30mm,right=30mm,top=25mm]{geometry} % Ränder ändern
+\usepackage{setspace}             % Abstände korrigieren
+\usepackage{scrhack}              % tocbasic Warnung entfernen
+\usepackage[all]{hypcap}          % Korrekte Verlinkung von Floats
+\usepackage{tabularx}             % Spezielle Tabellen
+\usepackage{rotating}             % Seiten drehen
+\usepackage{array}
+
+ % Einstellungen für Schriftarten
+\setkomafont{titlehead}{\centering\normalfont\sffamily}
+\setkomafont{author}{\normalfont\sffamily}
+\setkomafont{publishers}{\normalfont\sffamily}
+\setkomafont{date}{\normalfont\sffamily}
+\setkomafont{title}{\normalfont\sffamily\bfseries\LARGE}
+\setkomafont{pagehead}{\normalfont\sffamily}
+\setkomafont{pagenumber}{\normalfont\sffamily}
+\setkomafont{paragraph}{\sffamily\bfseries\small}
+\setkomafont{subsection}{\sffamily\bfseries\Large}
+\setkomafont{subsubsection}{\sffamily\itshape\bfseries\small}
+\addtokomafont{footnote}{\footnotesize}
+
+% Wichtige Abstände
+\setlength{\parskip}{0.2cm}  % 2mm Abstand zwischen zwei Absätzen
+\setlength{\parindent}{0mm}  % Absätze nicht einziehen
+\clubpenalty = 10000         % Keine "Schusterjungen"
+\widowpenalty = 10000        % Keine "Hurenkinder"
+\displaywidowpenalty = 10000 % Keine "Hurenkinder"
+                             % Siehe: https://de.wikipedia.org/wiki/Hurenkind_und_Schusterjunge
+
+% Einfacher Font-Wechsel über dieses Makro
+\newcommand{\changefont}[3]{
+\fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
+
+\changefont{ptm}{m}{n}  % Times New Roman für den Fließtext
+\renewcommand{\rmdefault}{ptm}
+
+\newcommand{\loesung}{\textbf{Lösung:}\\}
+
+\newcommand{\kapitel}[1]{\setcounter{section}{#1}}
+
+\newcommand{\kapitelname}[1]{\title{Übungsblatt \thesection: #1}}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\newcolumntype{B}[1]{r*{#1}{@{\,}r}}
+
+\RedeclareSectionCommand[
+  beforeskip=-1.0\baselineskip,
+  afterskip=0.01\baselineskip]{section}
+
+\RedeclareSectionCommand[
+  beforeskip=-1.0\baselineskip,
+  afterskip=0.01\baselineskip]{subsection}
+
+\titlehead{Webbasierte Systeme (WEB) -- Prof. Michael Gröschel -- Sommersemester 2020}
+
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hier beginnt das eigentliche Dokument
+% An den Einstellungen davor müssen Sie normalerweise keine Änderungen
+% vornehmen.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Bitte tragen Sie hier Ihren Namen und Ihre Mattrikelnummer ein
+\author{Aleksandar Hristov\\ (1722385)}
+
+% Welches Übungsblatt zu welchem Thema bearbeiten Sie?
+\kapitel{1}
+\kapitelname{Grundlagen und Architektur des WWW}
+
+\begin{document} % Hier beginnt das eigentliche Dokument
+\maketitle       % Titel erzeugen
+
+% ----------------------------------------------------------------------------
+% Jede Aufgabe bekommt eine subsection. Die Nummerierung erfolgt automatisch
+\subsection{Auffrischung}
+Erklären Sie die folgenden Grundbegriffe:
+\begin{itemize}
+    \item Socket 
+    \item Port - Ein Port ist der "Kanal" über den eine bestimmte art von internetraffik läuft
+    \item IP-Adresse - "eine einzigartige Adresse im Internet", die beim verbinden zum Internet verwiesen wird.  
+    \item TCP/IP - Transmission Comunication Protocol/Internet Protocol - Standarte Protokol auf dem das Internet aufbaut, zerklienert Datenpakete dammit sie compact Übertragen werden können.
+    \item URL - Uniform Resource Locator - Ein Schema nachdem der Ort einer Recource im Internet angegeben wird
+    \item URI - Uniform Resource Identifier - URL sind eine art von URI's, URN sind eine weitere art an URI's die dazu dienen um ein buch Eindeutig zu Identifizieren.  
+    \item DNS - Domain Name Server - Übersetzen einen Domain Namen in einer IP Adresse 
+    \item CDN - ! Content Delivery Network - 
+    \item MME-Type
+    \item REST - ! Ein Concept für die abtrennung von HTTP anfragen nutzung
+    \item Cookies - Metadaten die Webseiten erstellen um Nutzerdaten, oder Sitzungsdaten lokal im Browser zu speiuchern  
+    \item FTP - Ein Protokol für File Sharing.
+\end{itemize}
+
+\loesung
+
+\subsection{Aufbeu der URL}
+Wie ist eine URL aufgebaut?
+
+\loesung
+{Protokol/Service}.{Domain Name}.{Top Level Locator}
+\subsection{Pakages}
+Definieren Sie Packetorientierte Datenübertragung
+
+\loesung
+Die Ideee Daten in kleine "Häpchen" aufzuteilen, verschicken, und dann irgendwo anders zussamen zu bauen.
+\subsection{CDN}
+Welche Vorteile sind mit CDN verbunden?
+
+\loesung
+Phischikalische auswirkung von Distanz auf internet geschwindigkeit zu verringern
+\subsection{Webbrowser}
+Aus welchen Bestandteilen besteht ein Webbrowser und wie funktioniert er?
+
+\loesung
+
+\subsection{Webserver}
+Welche Aufgaben hat ein Weberver?
+
+\loesung
+
+\subsection{Apache 1}
+Wie kann man Apache konfigurieren?
+
+\loesung
+
+\subsection{Apache 2}
+Was sind Module bei Apache?
+
+\loesung
+
+\subsection{http}
+Was ist das http Protokol? Wo im Internet-Protokollstack findet man es wieder? Nutzen sie in Ihrer Erklärung folgende Begriffe:
+\begin{itemize}
+    \item Status Codes 
+    \item Aufbau von Request und Response Nachrichten
+    \item Header und Body
+    \item http \enquote{Verben}
+\end{itemize}
+
+\subsection{Content Type}
+Was verbirgt sich hinter dem Content-Type und wie wird er bei http eingesetzt?
+
+\loesung
+Um den typ der Resource festzulegen
+\subsection{REST}
+Definieren und erklären Sie REST.
+
+\loesung
+
+\subsection{http is stateless}
+"http is stateless." Erläutern Sie diese Aussage und was folgt daraus allgemein für Webentwicklung?
+
+\loesung
+!Es kann keine zustände speichern.
+\subsection{Cookies}
+Erklären Sie, wie Cookies funktionieren, z. B. von wem werden Cookies erzeugt und abgespeichert und wie die Lebensdauer gesteuert wird, als auch wozu Cookies eingesetzt werden!
+
+\loesung
+
+\subsection{Browser Plugins}
+Finden Sie herraus, wie sie mithilfe von Browser-Plugins den Austausch von Daten über das Netzwerk von Webseiten verfolgen und analysieren können.
+
+\loesung
+
+\subsection{Cache}
+Was ist Caching, wie funktioniert ein Cache grundsätzlich? Wo im Web kommen Caches zum Einsatz?
+
+\loesung
+Caches dienen dazu Daten aus Webseiten die nicht immer neu geliefert werden müssen, lokal zu speichern, und danach beim nächsten Aufruf nur sich die neuen Information zu holen.
+\subsection{Web Anwendungen}
+Wie sind Webanwendungen typischerweise aufgebaut? Welche Schichten werden in den sogenannten Mehrschichten-Architekturen (bei 2, 3, 4 Schichten) unterschieden? Was ist in diesem Zusammenhang der Unterschied zwischen \enquote{layer} und \enquote{tier}?
+
+\loesung
+
+\subsection{Full-Stack}
+Über welche Technologien, sollte ein Full-Stack Developer bescheid wissen?
+
+\loesung
+
+\subsection{Übungsaufgabe 1 - Berufsbild}
+Suchen Sie auf Karriereseiten von Unternehmen oder über Jobportale 3 Stellenanzeigen für "full stack"-Webentwickler? Listen Sie auf, welche Kompetenzen und Technologien verlangt werden.
+
+\loesung
+
+\subsection{Übungsaufgabe 2 - HTTP}
+Sie rufen mit Ihrem Webbrowser eine Website auf. Welchen Port benutzt der Webserver? Welchen Port benutzt Ihr Browser (Tipp: 80 ist falsch)?
+
+\loesung
+
+\subsection{Übungsaufgabe 3 - HTTP}
+Nutzen Sie die \enquote{Entwicklertools} im Webbrowser (empfohlen: Chrome), um sich mit dem http-Protokoll vertraut zu machen. Listen Sie die nützlichsten mit ihrer Funktion auf.
+
+\loesung
+
+\subsection{Übungsaufgabe 4 - HTTP}
+Rufen Sie eine bekannte Website auf und untersuchen Sie, was passiert, wenn Sie die Website mehrfach abrufen?
+
+\loesung
+
+\subsection{Übungsaufgabe 5 - HTTP}
+Wie kann (vermutlich) die Anzahl von http-Requests verringert werden?
+
+\loesung
+
+\subsection{Übungsaufgabe 6 - HTTP}
+Schauen Sie nach, welche Cookies bei Ihnen gesetzt wurden.
+
+\loesung
+
+\subsection{Übungsaufgabe 7 - Software/Tools}
+Installieren Sie auf Ihrem eigenen Rechner eine Webserver-Umgebung, idealerweise XAMPP. Testen Sie die Installation.
+
+\loesung
+
+\subsection{Übungsaufgabe 8 - Software/Tools}
+Schauen Sie sich an, wie der Webserver konfiguriert werden kann.
+
+\loesung
+
+\subsection{Übungsaufgabe 9 - Software/Tools}
+Suchen Sie sich einen Editor, der Sie im Rahmen der weiteren Veranstaltung begleitet. Er sollte mindestens Syntax-Highlighting für HTML, CSS und Javascript bieten. Empfehlung: Atom oder Visual Code oder die Werkzeuge von JetBrains (WebStorm oder PHPStorm)
+
+\loesung
+
+\subsection{Übungsaufgabe 10 - Software/Tools}
+Recherchieren Sie nach weiteren geeigneten Browser-Erweiterungen (für Chrome oder Firefox), die bei der Webentwicklung helfen.
+
+\loesung
+
+\subsection{Übungsaufgabe 11 - Software/Tools}
+Wenn Sie tiefer in Netzwerktechnologien und Protokolle einsteigen möchten, können Sie das Werkzeug Wireshark nutzen. Achten Sie aber unbedingt auf die legale Nutzung. Sniffing im Hochschulnetz ist untersagt und illegal!
+
+\loesung
+
+\end{document}

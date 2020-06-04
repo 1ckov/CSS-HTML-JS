@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Analyse von Studienverläufen mit Process-Mining-Techniken</title>
+</head>
+<body>
+
+<h1>Analyse von Studienverläufen mit Process-Mining-Techniken</h1>
+
+<p>Autoren: Rüdiger Buck-Emden · Franz-Dominik Dahmann</p>
+<p>DOI: https://doi.org/10.1365/s40702-018-0410-1</p>
+
+
+<!-- Zusammenfassung soll nicht nummeriert sein, genauso wie auch das Literaturverzeichnis nicht. -->
+<h2>Zusammenfassung</h2>
+
+
+
+<p>Studenten an Hochschulen und Universitäten haben bei der
+    Gestaltung ihrer Studienverläufe meistens viele Freiheitsgrade. Begrenzt werden
+    diese Freiheiten durch das Curriculum, das bestimmte Rahmenbedingungen für den
+    Studienverlauf einer Fachrichtung festlegt und Empfehlungen bzw. Vorgaben macht,
+    welche Veranstaltungen in welchem Semester besucht werden sollen.
+    In der Praxis weichen viele Studenten von den Empfehlungen des Curriculums ab.
+    Dies führt zu einer Vielzahl individueller Studienverläufe, von denen jeder einzelne
+    mehr oder weniger erfolgreich sein kann (z.B. in Hinblick auf das Erreichen des
+    angestrebten Abschlusses, auf die erzielte Abschlussnote oder auf die benötigte
+    Studiendauer).
+</p>
+
+<p>
+    Für eine an erfolgreichen Studienverläufen orientierte Weiterentwicklung von
+    Curricula und zugehörigen Studienberatungen fehlen den Verantwortlichen an Hochschulen
+    und Universitäten nicht selten detaillierte Erkenntnisse über das konkrete
+    Studienverhalten und über erfolgreiche bzw. weniger erfolgreiche Studienverlaufsmuster.
+    Durch Process-Mining-Techniken wie Bubble-Chart-Analysen, Fuzzy Mining
+    und Inductive Visual Mining können die Verantwortlichen Transparenz bei der
+    Auswertung von Studienverläufen gewinnen und darauf aufbauend gezielte Maßnahmen
+    einleiten.
+</p>
+
+<!-- Übung: Suchen Sie nach einer Möglichkeit, die nachfolgenden H2-Überschriften durchzunummerieren - automatisch! -->
+<h2>Einführung</h2>
+
+<p>
+    Unter dem Begriff Business Process Intelligence (BPI) werden verschiedene
+    Nutzungsformen von Business-Intelligence(BI)-Techniken zur Analyse von Geschäftsprozessen
+    zusammengefasst (Grigori et al. 2004; Linden et al. 2010). Diese
+    Disziplin hat in den vergangenen 15 Jahren erheblich an Bedeutung gewonnen
+    (Bolt et al. 2015), bietet sie doch Unternehmen und Verwaltungen die Basis dafür,
+    durch ein verbessertes Verständnis und eine kontinuierliche Weiterentwicklung
+    der Geschäftsabläufe wirtschaftliche und operative Vorteile zu erlangen. Als eine
+    wichtige BPI-Kategorie hat sich mittlerweile Process Mining etabliert (van der
+    Aalst 2016). Process Mining steht als Oberbegriff für Verfahren zur Analyse von
+    Geschäftsprozessen auf Basis von digitalen Spuren (Log- oder Protokolldaten), die
+    Geschäftsprozessinstanzen bei ihrer Ausführung im System hinterlassen. Im Einzelnen
+    kann man bei der praktischen Durchführung von Process Mining folgende
+    Phasen unterscheiden: Extraktion/Bereitstellung der benötigten Log-Daten, Aufbereitung
+    (Filterung, Bereinigung) der Log-Daten, Modellerstellung unter Verwendung
+    des gewählten Process-Mining-Verfahren sowie die Ableitung von Erkenntnissen
+    auf Basis des erstellten Modells (siehe Kap. 7).
+</p>
+
+<p>
+    Schon früh wurde auch im Bereich der Hochschulen und Universitäten unter
+    den Bezeichnungen Educational Data Mining (EDM) und Educational Process Mining
+    (EPM) über Möglichkeiten zur Verbesserung ausbildungsbezogener Abläufe
+    durch Nutzung geeigneter BPI-Analyseverfahren nachgedacht (siehe z.B. Romero
+    und Ventura 2007; Trˇcka et al. 2010; Cairns et al. 2015; Bogarín et al. 2017). Der
+    hier vorliegenden Beitrag zeigt, dass Studienverläufe von Studenten an Hochschulen
+    und Universitäten als eine spezielle Klasse von Geschäftsprozessen (oder präziser:
+    als Geschäftsprozessinstanzen oder Fälle, siehe Kap. 2) interpretiert werden können,
+    und weist konkrete Wege auf, diese mit den Möglichkeiten des Process Minings zu
+    analysieren. Auf Basis dieser Analysen können Verantwortliche an Hochschulen und
+    Universitäten (z. B. Studiendekane, Curriculums-Planer und Studienberater) typische
+    Studienverlaufsmuster erkennen, Bedürfnisse ihrer Studenten besser verstehen,
+    Curricula adäquat weiterentwickeln und Studenten bei der Studienverlaufsplanung
+    gezielt beraten.
+</p>
+
+<!-- Kapitel 2 -->
+<h2>Geschäftsprozesse</h2>
+
+<p>Unter einem Geschäftsprozess verstehen wir hier das allgemeine Konzept eines betrieblichen
+    Ablaufs (z.B. „Auftragsabwicklung“). Geschäftsprozesse umfassen verschiedene
+    Aktivitäten (z. B. „Auftrag erfassen“ und „Fertigungsauftrag erstellen“).
+    Die konkrete Ausführung eines allgemeinen Geschäftsprozesses bezeichnet man als
+    Fall (Case) oder auch Geschäftsprozessinstanz (z.B. „Auftragsabwicklung für Auftrag
+    X vom Kunden A“). Die Ausführung einer bestimmten Aktivität innerhalb
+    eines Falls (z.B. „Auftrag erfassen im Rahmen der Auftragsabwicklung für Auftrag
+    X vom Kunden A“) korrespondiert mit einem zugehörigen Ereignis (Event),
+    z.B. dem Start- oder Endereignis der Aktivität. Ereignisse, die mit derselben Aktivität
+    verbunden sind (z. B. „Auftrag erfassen“ in unterschiedlichen Fällen), werden
+    zu Ereignisklassen (Event Classes) zusammengefasst (Dumas und García-Bañuelos
+    2015). Jede Ereignisklasse wird in dem durch Process Mining erzeugten Prozessmodell
+    eindeutig mit einem Aktivitätsknoten assoziiert (Günther und van der Aalst
+    2007). Gerichtete Kanten (Verbindungen) definieren im Prozessmodell eine partielle
+    Ordnung auf der Menge der Aktivitätsknoten und drücken die zeitlich-logische
+    Reihenfolge der Knoten aus. Ereignisse sind eindeutig identifizierbar und werden
+    vom ausführenden System in gewisser Weise als Event-Log aufgezeichnet. Um den
+    Verlauf einzelner Prozessinstanz mit Process Mining analysieren zu können, muss
+    jedes Ereignis des Event-Logs einem konkreten Fall zuordenbar sein (siehe auch
+    van der Aalst 2016).
+</p>
+
+<!-- Kapitel 3 -->
+<h2>Studienverläufe und ProcessMining</h2>
+
+
+<h2>Stand der Forschung</h2>
+
+<p>
+    Process Mining hat als allgemeine Disziplin zur Analyse von Geschäftsprozessen
+    seit dem wegweisenden Artikel von van der Aalst und Weijters aus dem Jahre 2004
+    (van der Aalst und Weijters 2004) kontinuierlich an Aufmerksamkeit gewonnen.
+    Eine umfassende Einführung in die Möglichkeiten von Process Mining gibt van der
+    Aalst in seinem aktuellen Buch zum Thema (van der Aalst 2016). Praktische Anwendungsszenarien
+    von Process Mining sind vielfältig und werden schwerpunktmäßig
+    im Kontext betrieblicher Abläufe diskutiert (siehe z. B. Rischawe und Buck-Emden
+    2015). Für die Analyse von Studienverläufen an Hochschulen und Universitäten auf
+    Basis von Process-Mining-Techniken existieren ebenfalls einige Arbeiten, die im
+    Rahmen von Educational Data Mining und Educational Process Mining (Bogarín
+    et al. 2017) diskutiert werden, z.B. von Trˇcka und Pechenizkiy (2009), Emond und
+    Buffett (2015), Cairns et al. (2015) und Mukala et al. (2015). Unserem Vorgehen
+    am nächsten kommen Trˇcka et al. (2010), Wang und Zaiane (2015) sowie Schulte
+    et al. (2017), allerdings mit im Vergleich zu dem nachfolgend beschriebenen Vorgehen
+    weniger umfassenden bzw. weniger detaillierten Ansätzen. So beschränken
+    sich Trˇcka et al. (2010) auf die Bubble-Chart-Analyse zur Visualisierung von Prüfungsergebniskategorien
+    auf der Ebene einzelner Studenten sowie auf Fuzzy Mining
+    zur Untersuchung der Popularität einzelner Lehrveranstaltungen. Wang und Zaiane
+    (2015) machen wie auch Schulte et al. (2017) keine spezifischen Angaben zu den
+    von ihnen konkret eingesetzten Process-Mining-Verfahren.
+</p>
+
+<!-- Kapitel 5 -->
+<h2>Werkzeuge</h2>
+
+<!-- Kapitel 5.1 -->
+<h3>Datenvorbereitung</h3>
+
+<h3>RapidMiner</h3>
+
+<p>Der ursprünglich aus einem Forschungsprojekt an der TU Dortmund hervorgegangene,
+    Java-basierte RapidMiner (Mierswa 2009) wird heute von der gleichnamigen
+    Firma als Werkzeug für maschinelles Lernen und Data Mining angeboten. Im Rahmen
+    unserer Untersuchung haben wir den RapidMiner Version 7.2 für die Bubble-
+    Chart-Analyse (Erzeugung von Blasendiagrammen) eingesetzt (siehe Abschn. 6.1).
+    Alternativ zum RapidMiner können auch beliebige andere Visualisierungswerkzeuge
+    genutzt werden, sofern diese wie der RapidMiner Blasendiagramme mit mindestens
+    vier Parametern (X- und Y-Koordinaten sowie Objektgröße und Objektfarbe) unterstützen.
+    Wir haben uns aufgrund der einfachen Bedienbarkeit und der Verfügbarkeit
+    als Open-Source-Software für den RapidMiner entschieden.
+</p>
+
+
+<h3>ProM</h3>
+
+<p>ProM ist ein umfassendes, kostenfreies, an der TU Eindhoven entwickeltes und auf
+    der Programmiersprache Java basierendes Process-Mining-Framework (van Dongen
+    et al. 2005). Durch Verwendung von Plug-Ins können verschiedenste Process-
+    Mining-Verfahren eingesetzt werden. Im Rahmen dieser Untersuchung wurde ProM
+    Version 6.5 in Verbindung mit dem Inductive Visual Miner (IvM, siehe Abschn. 6.3)
+    genutzt. IvM steht ausschließlich als Plug-In für ProM zur Verfügung.</p>
+
+<h3>Disco</h3>
+
+<h2>Verfahren</h2>
+
+<!-- Kapitel 7 -->
+<h2>Vorgehensmodell zur Studienverlaufsanalyse mit ProcessMining</h2>
+
+<h3>Datenbereitstellung</h3>
+<h3>Datenaufbereitung</h3>
+<h3>Anwendung der Process-Mining-Verfahren</h3>
+<h4>Bubble-Chart-Analyse</h4>
+<h4>Fuzzy Mining</h4>
+<h4>Inductive Visual Mining</h4>
+
+<h3>Ergebnisauswertung</h3>
+
+<!-- künstliche Tabelle ohne Sinn -->
+<!-- Übung: Tabellenzeilen sollen immer im Wechsel grauen und weißen Hintergrund haben -->
+<table>
+    <th>
+        <td>Verfahren</td>
+        <td>Anzahl der Teilnehmer (n)</td>
+        <td>Erfolgreiche Studierende in Prozent</td>
+    </th>
+    <tr>
+        <td>Fuzzy Mining</td>
+        <td>212</td>
+        <td>87%</td>
+    </tr>
+    <tr>
+        <td>Alpha-Miner</td>
+        <td>210</td>
+        <td>85%</td>
+    </tr>
+    <tr>
+        <td>Alpha-Miner (advanced)</td>
+        <td>254</td>
+        <td>65%</td>
+    </tr>
+    <tr>
+        <td>Bubble-Miner</td>
+        <td>202</td>
+        <td>12%</td>
+    </tr>
+    <tr>
+        <td>Heuristic Miner</td>
+        <td>177</td>
+        <td>52%</td>
+    </tr>
+    <tr>
+        <td>Celonis Fuzzy Mining</td>
+        <td>433</td>
+        <td>99%</td>
+    </tr>
+</table>
+
+<h2>Zusammenfassung und Fazit</h2>
+
+<!-- Literatur soll nicht nummeriert sein! -->
+<h2>Literatur</h2>
+
+</body>
+</html>
