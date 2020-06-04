@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+body {
+    margin-left: 25%;
+    margin-right: 25%;
+    
+    background-image: url("img/wood.png");
+    counter-reset: kapitel;
+    
+}
+
+div, section, footer ,header{
+    background-color: rgba(153, 145, 145, 0.801);
+    padding: 0.4rem;
+}
+
+
+h1, h2, h3{
+
+    font-family: 'Oswald', sans-serif;
+}
+h1 {
+    font-size: 3rem;
+}
+p.fliesstext {
+    font-family: 'Concert One', cursive;
+    line-height: 2rem;
+}
+
+h3{
+    padding-left: 50px;
+}
+
+figure {
+    border: 10px;
+    border-color:rgb(85, 199, 236);
+    border-style: solid;
+}
+
+a {
+    color: green;
+}
+
+a:hover {
+    background-color: yellow;
+}
+
+ul {
+    list-style-image: url(img/52757-direct-hit-icon.png);
+}
+h2.enumerable::before {
+    counter-increment: kapitel;
+    content:"Kapitel " counter(kapitel)": ";
+}
+

@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Analyse von Studienverläufen mit Process-Mining-Techniken</title>
+    <link rel="stylesheet" href="process.css">
 </head>
 <body>
+<header>
 
 <h1>Analyse von Studienverläufen mit Process-Mining-Techniken</h1>
 
@@ -13,11 +15,14 @@
 
 
 <!-- Zusammenfassung soll nicht nummeriert sein, genauso wie auch das Literaturverzeichnis nicht. -->
+</header>
+
+<section>
 <h2>Zusammenfassung</h2>
 
 
 
-<p>Studenten an Hochschulen und Universitäten haben bei der
+<p class="fliesstext">Studenten an Hochschulen und Universitäten haben bei der
     Gestaltung ihrer Studienverläufe meistens viele Freiheitsgrade. Begrenzt werden
     diese Freiheiten durch das Curriculum, das bestimmte Rahmenbedingungen für den
     Studienverlauf einer Fachrichtung festlegt und Empfehlungen bzw. Vorgaben macht,
@@ -29,7 +34,7 @@
     Studiendauer).
 </p>
 
-<p>
+<p class="fliesstext">
     Für eine an erfolgreichen Studienverläufen orientierte Weiterentwicklung von
     Curricula und zugehörigen Studienberatungen fehlen den Verantwortlichen an Hochschulen
     und Universitäten nicht selten detaillierte Erkenntnisse über das konkrete
@@ -39,11 +44,12 @@
     Auswertung von Studienverläufen gewinnen und darauf aufbauend gezielte Maßnahmen
     einleiten.
 </p>
-
+</section>
+<section>
 <!-- Übung: Suchen Sie nach einer Möglichkeit, die nachfolgenden H2-Überschriften durchzunummerieren - automatisch! -->
-<h2>Einführung</h2>
+<h2 class="enumerable">Einführung</h2>
 
-<p>
+<p class="fliesstext">
     Unter dem Begriff Business Process Intelligence (BPI) werden verschiedene
     Nutzungsformen von Business-Intelligence(BI)-Techniken zur Analyse von Geschäftsprozessen
     zusammengefasst (Grigori et al. 2004; Linden et al. 2010). Diese
@@ -62,7 +68,7 @@
     auf Basis des erstellten Modells (siehe Kap. 7).
 </p>
 
-<p>
+<p class="fliesstext">
     Schon früh wurde auch im Bereich der Hochschulen und Universitäten unter
     den Bezeichnungen Educational Data Mining (EDM) und Educational Process Mining
     (EPM) über Möglichkeiten zur Verbesserung ausbildungsbezogener Abläufe
@@ -78,11 +84,12 @@
     Curricula adäquat weiterentwickeln und Studenten bei der Studienverlaufsplanung
     gezielt beraten.
 </p>
-
+</section>
+<section>
 <!-- Kapitel 2 -->
-<h2>Geschäftsprozesse</h2>
+<h2 class="enumerable">Geschäftsprozesse</h2>
 
-<p>Unter einem Geschäftsprozess verstehen wir hier das allgemeine Konzept eines betrieblichen
+<p class="fliesstext">Unter einem Geschäftsprozess verstehen wir hier das allgemeine Konzept eines betrieblichen
     Ablaufs (z.B. „Auftragsabwicklung“). Geschäftsprozesse umfassen verschiedene
     Aktivitäten (z. B. „Auftrag erfassen“ und „Fertigungsauftrag erstellen“).
     Die konkrete Ausführung eines allgemeinen Geschäftsprozesses bezeichnet man als
@@ -103,14 +110,16 @@
     jedes Ereignis des Event-Logs einem konkreten Fall zuordenbar sein (siehe auch
     van der Aalst 2016).
 </p>
-
+</section>
+<section>
 <!-- Kapitel 3 -->
-<h2>Studienverläufe und ProcessMining</h2>
+<h2 class="enumerable">Studienverläufe und ProcessMining</h2>
 
+</section>
+<section>
+<h2 class="enumerable">Stand der Forschung</h2>
 
-<h2>Stand der Forschung</h2>
-
-<p>
+<p class="fliesstext">
     Process Mining hat als allgemeine Disziplin zur Analyse von Geschäftsprozessen
     seit dem wegweisenden Artikel von van der Aalst und Weijters aus dem Jahre 2004
     (van der Aalst und Weijters 2004) kontinuierlich an Aufmerksamkeit gewonnen.
@@ -132,16 +141,17 @@
     (2015) machen wie auch Schulte et al. (2017) keine spezifischen Angaben zu den
     von ihnen konkret eingesetzten Process-Mining-Verfahren.
 </p>
-
+</section>
 <!-- Kapitel 5 -->
-<h2>Werkzeuge</h2>
+<section>
+<h2 class="enumerable">Werkzeuge</h2>
 
 <!-- Kapitel 5.1 -->
 <h3>Datenvorbereitung</h3>
 
 <h3>RapidMiner</h3>
 
-<p>Der ursprünglich aus einem Forschungsprojekt an der TU Dortmund hervorgegangene,
+<p class="fliesstext">Der ursprünglich aus einem Forschungsprojekt an der TU Dortmund hervorgegangene,
     Java-basierte RapidMiner (Mierswa 2009) wird heute von der gleichnamigen
     Firma als Werkzeug für maschinelles Lernen und Data Mining angeboten. Im Rahmen
     unserer Untersuchung haben wir den RapidMiner Version 7.2 für die Bubble-
@@ -156,7 +166,7 @@
 
 <h3>ProM</h3>
 
-<p>ProM ist ein umfassendes, kostenfreies, an der TU Eindhoven entwickeltes und auf
+<p class="fliesstext">ProM ist ein umfassendes, kostenfreies, an der TU Eindhoven entwickeltes und auf
     der Programmiersprache Java basierendes Process-Mining-Framework (van Dongen
     et al. 2005). Durch Verwendung von Plug-Ins können verschiedenste Process-
     Mining-Verfahren eingesetzt werden. Im Rahmen dieser Untersuchung wurde ProM
@@ -164,11 +174,13 @@
     genutzt. IvM steht ausschließlich als Plug-In für ProM zur Verfügung.</p>
 
 <h3>Disco</h3>
-
-<h2>Verfahren</h2>
-
+</section>
+<section>
+<h2 class="enumerable">Verfahren</h2>
+</section>
+<section>
 <!-- Kapitel 7 -->
-<h2>Vorgehensmodell zur Studienverlaufsanalyse mit ProcessMining</h2>
+<h2 class="enumerable">Vorgehensmodell zur Studienverlaufsanalyse mit ProcessMining</h2>
 
 <h3>Datenbereitstellung</h3>
 <h3>Datenaufbereitung</h3>
@@ -182,11 +194,11 @@
 <!-- künstliche Tabelle ohne Sinn -->
 <!-- Übung: Tabellenzeilen sollen immer im Wechsel grauen und weißen Hintergrund haben -->
 <table>
-    <th>
-        <td>Verfahren</td>
-        <td>Anzahl der Teilnehmer (n)</td>
-        <td>Erfolgreiche Studierende in Prozent</td>
-    </th>
+    <tr>
+            <th>Verfahren</th>
+            <th>Anzahl der Teilnehmer (n)</th>
+            <th>Erfolgreiche Studierende in Prozent</th>
+    </tr>
     <tr>
         <td>Fuzzy Mining</td>
         <td>212</td>
@@ -218,11 +230,12 @@
         <td>99%</td>
     </tr>
 </table>
-
-<h2>Zusammenfassung und Fazit</h2>
+</section>
+<footer>
+<h2 >Zusammenfassung und Fazit</h2>
 
 <!-- Literatur soll nicht nummeriert sein! -->
 <h2>Literatur</h2>
-
+</footer>
 </body>
 </html>

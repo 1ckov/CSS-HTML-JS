@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Contact and registration</h1>
+        
+    </header>
+    <div class="form">
+    <h2>Fill out the following form, in order to book a Date for a course.</h2>
+    <form > 
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname" required><br>
+
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname" required><br>
+        
+        <label for="firma">Firma:</label><br>
+        <input type="text" id="firma" name="firma" ><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br>
+       
+        <label for="seminar">Seminar</label><br>
+        <select name="Seminar:" id="seminar">
+            <option value="DSA">UML - Describing System Architectures</option>
+            <option value="IAD">UML - In App Development</option>
+            <option value="IBW">UML - In the Buissness World</option>
+        </select><br>
+
+        <label for="nofp">Number Of Participants (1-20):</label><br>
+        <input type="number" id="nofp" name="nofp" min="1" max="20" value="1" required ><br>
+        
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" required><br>
+
+        <label for="comment_field">Addition Comments:</label><br>
+        <textarea name="comment_field" id="comment_field" cols="30" rows="10"></textarea><br>
+
+        <input type="checkbox" id="data" name="data" required>
+        <label for="data">I agree to the terms of service</label><br>
+        
+        <input type="submit" name="submit" id="submit" value="Submit">
+        
+    </form>
+</div>
+</body>
+</html>

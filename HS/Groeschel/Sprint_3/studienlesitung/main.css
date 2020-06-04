@@ -1,0 +1,19 @@
+body {
+    background-color: darkcyan;
+}
+
+table, th, td, tr {
+    border: 1px solid  black;
+    text-align: left ;
+}
+.to-be-hidden{
+    border: none
+}
+
+ul {
+    list-style-image: url(images/interface.png);
+    size: 1rem;
+}
+
+
+

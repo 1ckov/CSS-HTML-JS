@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Process Mining Manifesto</title>
+    <link rel="stylesheet" href="process.css">
 </head>
 <body>
-
+<header>
+<div class="header">
 <h1>Process Mining Manifesto</h1>
 
 <p>Quelle: http://www.win.tue.nl/ieeetfpm/doku.php?id=shared:process_mining_manifesto</p>
 
 <p>Zusammenfassung</p>
 
-<p>
+<p class="fliesstext">
     Ein Manifest ist eine "öffentliche Erklärung von Zielen und Absichten", getragen von einer Gruppe
     von Personen. Das vorliegende Manifest wurde von Mitgliedern und Unterstützern der IEEE Task
     Force on Process Mining verfasst. Das Ziel dieser Task Force ist die Förderung der
@@ -20,14 +22,14 @@
     Verständnisses rund um Process Mining.
 </p>
 
-<p>
+<p class="fliesstext">
     Process Mining ist eine vergleichsweise junge Wissenschaftsdisziplin,
     angesiedelt zwischen Computational Intelligence und Data Mining auf der
     einen Seite und Prozessmodellierung und Analyse auf der anderen. Die
     Grundidee von Process Mining ist es, reale Prozesse (im Gegensatz zu
     vermuteten oder angenommenen Prozessen) durch Extrahieren von
     Wissen aus Ereignislogs heutiger (Informations-)systeme zu erkennen, zu
-    überwachen und zu verbessern. Abbildung 1 skizziert diesen Anspruch.
+    überwachen und zu verbessern. <a href="#abb1"> Abbildung 1 </a> skizziert diesen Anspruch.
     Process Mining umfasst das (automatische) Erkennen von Prozessen
     (d.h. die Konstruktion von Prozessmodellen für ein Ereignislog),
     die Übereinstimmungsprüfung (d.h. die Überwachung von Abweichungen
@@ -37,25 +39,30 @@
     Treffen von Vorhersagen für Fälle, sowie das Ableiten von Empfehlungen auf Basis der Fallhistorie.
 </p>
 
-<p>
-    <img src="img/abb1.png">
-    Abbildung 1: Process Mining Techniken extrahieren
-    Informationen aus Ereignislogdaten mit denen Prozesse erkannt,
-    überwacht und verbessert werden können.
-</p>
-
-<h2>Inhaltsverzeichnis</h2>
-
+<figure>
+    <img id="#abb1" src="img/abb1.png" alt="Process Mining Techniken extrahieren">
+    <figcaption>
+        Abbildung 1: Process Mining Techniken extrahieren
+        Informationen aus Ereignislogdaten mit denen Prozesse erkannt,
+        überwacht und verbessert werden können.
+    </figcaption>
+</figure>
+</div>
+</header>
+<div class="nav_and_summary">
+<h2 id="inhalts_verzeichnis">Inhaltsverzeichnis</h2>
+<nav>
 <ul>
-    <li>Process Mining: Stand der Forschung</li>
-    <li>Leitsätze
-    <li>Herausforderungen</li>
-    <li>Epilog</li>
-    <li>Glossar</li>
-    <li>Weitere spannende Artikel</li>
+    <li><a href="#process_mining">Process Mining: Stand der Forschung</a></li>
+    <li><a href="#leit_seatze">Leitsätze</a></li>
+    <li><a href="#heraus_forderungen">Herausforderungen</a></li>
+    <li><a href="#epi_log">Epilog</a></li>
+    <li><a href="#glos_sar">Glossar</a></li>
+    <li><a href="#weitere_artikel">Weitere spannende Artikel</a></li>
 </ul>
+</nav>
 
-<p>
+<p class="fliesstext">
     Mit Hilfe von Methoden des Process Mining können Einsichten aus Ereignisdaten gewonnen werden, welche heutzutage in
     vielen Informationssystemen anfallen. Diese Methoden eröffnen neue Möglichkeiten, um Prozesse in einer Vielzahl von
     Anwendungsszenarien zu erkennen, zu überwachen und zu verbessern. Es gibt zwei wesentliche Gründe für das wachsende
@@ -70,9 +77,11 @@
     unterstützung weiter zu verbessern.
 </p>
 
+
 <aside>
     <p>
         Die Absichten der Task Force sind insbesondere:
+    </p>
     <ol>
         <li>Endnutzer, Entwickler, Berater, Manager und Wissenschaftler über den neuesten Stand der
             Technik im Bereich des Process Mining zu informieren,
@@ -85,10 +94,10 @@
         <li> das Veröffentlichen von Artikeln, Büchern, Videos und Special Issues von Zeitschriften.</li>
 
     </ol>
-    </p>
+    
 </aside>
 
-<p>Process Mining stellt eine wichtige Brücke zwischen Data Mining und der
+<p class="fliesstext">Process Mining stellt eine wichtige Brücke zwischen Data Mining und der
     Geschäftsprozessmodellierung und Analyse dar. Unter dem Slogan
     Business Intelligence (BI) wurde eine Vielzahl von Modewörtern eingeführt
     um einfache Berichts- und Dashboard-Werkzeuge zu vermarkten. Business
@@ -136,10 +145,12 @@
 </p>
 
 <p>...</p>
+</div>
+<section>
+<h2 id="process_mining">Process Mining: Stand der Forschung</h2>
+<a href="#inhalts_verzeichnis">Zurück zum Inhaltsverzeichnis</a>
 
-<h2>Process Mining: Stand der Forschung</h2>
-
-<p>
+<p class="fliesstext">
     Die wachsenden Möglichkeiten, die Informationssysteme und anderen
     computergestützte Anwendungen bieten, werden treffend von Moores
     Gesetz charakterisiert. Gordon Moore, Mitgründer von Intel, sagte 1965
@@ -152,7 +163,7 @@
     mehr miteinander verwoben.
 </p>
 
-<p>
+<p class="fliesstext">
     Das Wachstum dieser digitalen Welt, welches mit den Prozessen in
     modernen Organisationen eng verbunden ist, ermöglicht es Ereignisse
     aufzuzeichnen und zu analysieren. Ereignisse beziehen sich auf eine
@@ -167,7 +178,7 @@
     verschlanken. Process Mining zielt genau auf diese Art von Fragen ab.
 </p>
 
-<p>
+<p class="fliesstext">
     Ausgangspunkt für Process Mining sind Ereignislogdaten. Alle Methoden
     des Process Mining gehen davon aus, dass diese Daten die zeitliche
     Reihenfolge der Ereignisse wiedergeben, und dabei jedes Ereignis
@@ -179,16 +190,17 @@
     den Zeitstempel des Ereignisses oder zu dem Ereignis gehörende
     Datenelemente (bspw. Auftragsvolumen).
 </p>
+<figure>
+    <img id="#abb2" src="img/abb2.png" alt="Positionierung der drei wichtigsten Typen des Process">
+    <figcaption>
+        Abbildung 2: Positionierung der drei wichtigsten Typen des Process
+        Mining: (a) Erkennung, (b) Übereinstimmungsprüfung und (c)
+        Erweiterung.
+    </figcaption>
+</figure>
 
-<p>
-    <img src="img/abb2.png">
-    Abbildung 2: Positionierung der drei wichtigsten Typen des Process
-    Mining: (a) Erkennung, (b) Übereinstimmungsprüfung und (c)
-    Erweiterung.
-</p>
-
-<p>
-    Abbildung 2 zeigt, dass Ereignislogdaten für drei Arten des
+<p class="fliesstext">
+    <a href="#abb2">Abbildung 2 </a>zeigt, dass Ereignislogdaten für drei Arten des
     Process Mining genutzt werden können. Die erste Art ist <i>Erkennung</i>.
     Eine Erkennungsmethode nimmt Ereignislogdaten als Eingabe und
     erzeugt ein Modell ohne dafür weitere Informationen zu benötigen.
@@ -212,15 +224,18 @@
     Häufigkeiten im Modell angezeigt werden.
 </p>
 
-<p>
-    <img src="img/abb3.png">
-    Abbildung 3: Die drei Arten des Process Mining dargestellt in Bezug
-    auf ihre Eingabe und Ausgabe: (a) Erkennung, (b)
-    Übereinstimmungsprüfung und (c) Erweiterung.
-</p>
+<figure>
+    <img id="#abb3" src="img/abb3.png" alt="Die drei Arten des Process Mining dargestellt in Bezug">
+    <figcaption>
+        Abbildung 3: Die drei Arten des Process Mining dargestellt in Bezug
+        auf ihre Eingabe und Ausgabe: (a) Erkennung, (b)
+        Übereinstimmungsprüfung und (c) Erweiterung.
+    </figcaption>
+</figure>
 
-<p>
-    Abbildung 3 zeigt die drei Typen des Process Mining mit Blick auf ihre
+
+<p class="fliesstext">
+    <a href="#abb2">Abbildung 3 </a>zeigt die drei Typen des Process Mining mit Blick auf ihre
     Eingabe und Ausgabe. Methoden der Erkennung nutzen Ereignislogdaten und
     liefern ein Modell. Das erzeugte Modell ist typischerweise ein
     Prozessmodell (bspw. ein Petri-Netz, UML-Aktivitätsdiagramm, BPMN- oder
@@ -233,7 +248,7 @@
     Ausgabe ist ein erweitertes Modell.
 </p>
 
-<p>Process Mining kann weiterhin verschiedene Perspektiven abdecken. Die Kontrollflussperspektive betrachtet
+<p class="fliesstext">Process Mining kann weiterhin verschiedene Perspektiven abdecken. Die Kontrollflussperspektive betrachtet
     den Kontrollfluss, sprich die Abfolge der Aktivitäten. Das Ziel beim Mining
     dieser Perspektive besteht darin, eine treffende Beschreibung aller
     Ausführungspfade zu finden. Das Ergebnis wird typischerweise als Petri-
@@ -258,10 +273,12 @@
 </p>
 
 <p>...</p>
+</section>
+<section>
+<h2 id="leit_seatze">Leitsätze</h2>
+<a href="#inhalts_verzeichnis">Zurück zum Inhaltsverzeichnis</a>
 
-<h2>Leitsätze</h2>
-
-<p>
+<p class="fliesstext">
     Wie für jede neue Technik, gibt es auch für das Process Mining offensichtliche
     Fehler, welche im praktischen Einsatz gemacht werden können. Aus diesem
     Grund stellen wir sechs Leitsätze vor, welche Anwender und Analysten vor
@@ -270,7 +287,7 @@
 
 <h3>LS1: Ereignisse sind fundamentale Informationsträger</h3>
 
-<p>Ausgangspunkt für alle Aktivitäten des Process Mining sind aufgezeichnete
+<p class="fliesstext">Ausgangspunkt für alle Aktivitäten des Process Mining sind aufgezeichnete
     Ereignisse. Sammlungen solcher Ereignisse werden Ereignislogs
     genannt. Dies heißt jedoch nicht zwangsläufig, dass Ereignisse in Form
     dedizierter Logdateien vorliegen. Ereignisse können in
@@ -290,8 +307,10 @@
 
 <h3>LS6: Process Mining ist ein kontinuierlicher Prozess</h3>
 
-
-<h2>Herausforderungen</h2>
+</section>
+<section>
+<h2 id="heraus_forderungen">Herausforderungen</h2>
+<a href="#inhalts_verzeichnis">Zurück zum Inhaltsverzeichnis</a>
 
 <p>Herausforderungen:</p>
 
@@ -315,10 +334,12 @@
     <li>Nutzbarkeit für Nicht-Experten verbessern.</li>
     <li>Verständlichkeit für Nicht-Experten verbessern.</li>
 </ol>
+</section>
+<section>
+<h2 id="epi_log">Epilog</h2>
+<a href="#inhalts_verzeichnis">Zurück zum Inhaltsverzeichnis</a>
 
-<h2>Epilog</h2>
-
-<p>Ziel der IEEE Task Force on Process Mining ist es (a) die Anwendung von
+<p class="fliesstext">Ziel der IEEE Task Force on Process Mining ist es (a) die Anwendung von
     Process Mining zu fördern und zu verbreiten, (b) Softwareentwickler,
     Berater, Manager und Endnutzer bei der Nutzung modernster Techniken zu
     unterstützen, und (c) die Forschung im Bereich Process Mining weiter
@@ -331,8 +352,10 @@
     Beides soll dazu beitragen, den Reifegrad von Process-Mining-Techniken
     zu erhöhen.
 </p>
-
-<h2>Glossar</h2>
+</section>
+<section>
+<h2 id="glos_sar">Glossar</h2>
+<a href="#inhalts_verzeichnis">Zurück zum Inhaltsverzeichnis</a>
 
 <dl>
     <dt>Aktivität (Activity)</dt>
@@ -354,13 +377,15 @@
     gespeichert werden (z.B. können Ereignisse über verschiedene Tabellen verteilt sein).
     </dd>
 </dl>
-
-<h2>Weitere spannende Artikel</h2>
+</section>
+<footer>
+<h2 id="weitere_artikel">Weitere spannende Artikel</h2>
+<a href="#inhalts_verzeichnis">Zurück zum Inhaltsverzeichnis</a>
 
 <ul>
-    <li><a href="analyse.html">Analyse von Studienverläufen mit Process-Mining-Techniken</a></li>
-    <li><a href="https://www.springer.com/de/book/9783662498507">Process Mining - Data Science in Action</li>
+    <li><a href="analyse.html" target="_blank">Analyse von Studienverläufen mit Process-Mining-Techniken</a></li>
+    <li><a href="https://www.springer.com/de/book/9783662498507" target="_blank">Process Mining - Data Science in Action</a></li>
 </ul>
-
+</footer>
 </body>
 </html>

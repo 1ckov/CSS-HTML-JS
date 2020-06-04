@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+table, th, td, tr {
+    border: 1px solid black;
+    text-align: left ;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  background-color: grey;
+}
+div {
+  background-color: rgba(0, 139, 139, 0.384);
+  padding: 0.4rem;
+}
+figure {
+  border: 10px;
+  border-color:rgba(142, 180, 192, 0.301);
+  border-style: groove;
+  padding: 1rem;
+}
+
+
+
