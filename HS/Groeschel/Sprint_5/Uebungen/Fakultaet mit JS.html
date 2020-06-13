@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>function showfak() {
+        console.log("showfak");
+        
+        // TODO: Schreiben Sie hier (maximal) 3 Zeilen Code
+        //       um die Fakultät für die eingegeben Zahl zu 
+        //       berechnen und auszugeben.
+        document.getElementById("nfak").innerHTML=fak(document.getElementById("n").value)
+      }
+      
+      function fak(n) {
+        // console.log("fak");
+        return n <= 1 ? 1 : n * fak(n-1);
+      }</script>
+</head>
+<body>
+    <h1>Fakultät</h1>
+
+<form>
+  <input type="number" min="1" max="20" placeholder="n" id="n" value="7">!
+  <input type="button" value="=" onclick="showfak()">
+  <span id="nfak"></span>
+</form>
+</body>
+</html>

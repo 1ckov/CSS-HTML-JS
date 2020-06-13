@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>function concat_to_list() {
+        var new_node = document.createElement("li");
+        new_node.innerHTML = document.getElementById("text_area").value;
+        document.getElementById("lst").appendChild(new_node);
+      }
+      
+      function delete_list_childs() {
+        var lst = document.getElementById("lst");
+        console.log(lst);
+        while(lst.hasChildNodes) {
+          lst.removeChild(lst.childNodes[0]);
+        }
+      }</script>
+</head>
+<body>
+    <h1>Please write something down below:</h1>
+<form>
+  <textarea id="text_area"></textarea>
+  <br>
+  <input type="button" value="submit" onclick="concat_to_list()"> 
+  <input type="button" value="delete" onclick="delete_list_childs()"> 
+</form>
+<ul id="lst"></ul>
+</body>
+</html>
